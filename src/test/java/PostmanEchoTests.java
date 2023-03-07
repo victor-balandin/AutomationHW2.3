@@ -10,14 +10,14 @@ public class PostmanEchoTests {
 // Предусловия
         given()
                 .baseUri("https://postman-echo.com")
-                .body("01.01.2023") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("some data") // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
                 .when()
                 .post("/post")
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("01.02.2023"))
+                .body("data", equalTo("some data"))
         ;
     }
 }
